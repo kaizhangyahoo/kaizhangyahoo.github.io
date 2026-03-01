@@ -1,0 +1,9 @@
+name = "SRE Terminal"
+license = "MIT"
+licenselink = "https://github.com/kaizhangyahoo/kaizhangyahoo.github.io/blob/main/LICENSE"
+description = "A dark, terminal-inspired Hugo theme for SRE/DevOps professionals"
+tags = ["dark", "terminal", "sre", "devops", "personal"]
+min_version = "0.100.0"
+
+[author]
+  name = "Kai Zhang"

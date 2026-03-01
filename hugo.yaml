@@ -1,0 +1,28 @@
+baseURL: "https://kaizhangyahoo.github.io/"
+languageCode: en-us
+title: "Kai Zhang | SRE & Trading Tech"
+theme: sre-terminal
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  description: "Senior SRE / DevOps Professional specializing in high-frequency finance infrastructure"
+  author: "Kai Zhang"
+
+menu:
+  main:
+    - name: Stack
+      url: "#stack"
+      weight: 1
+    - name: War Stories
+      url: "#warstories"
+      weight: 2
+    - name: Terminal
+      url: "#terminal"
+      weight: 3
+    - name: Connect
+      url: "#connect"
+      weight: 4

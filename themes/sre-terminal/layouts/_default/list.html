@@ -1,0 +1,23 @@
+{{ define "main" }}
+<section class="list-page" style="padding: 8rem 2rem 4rem;">
+    <div class="section-container">
+        <h1 class="section-title">{{ .Title }}</h1>
+        <div style="margin-top: 2rem;">
+            {{ .Content }}
+        </div>
+        {{ range .Pages }}
+        <article
+            style="background: var(--gradient-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 1.5rem; margin-bottom: 1.25rem; transition: all 0.3s ease;">
+            <a href="{{ .Permalink }}" style="display: block;">
+                <h2 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.5rem;">{{ .Title }}</h2>
+                {{ if .Date }}<time
+                    style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--accent-green);">{{
+                    .Date.Format "2006-01-02" }}</time>{{ end }}
+                {{ if .Description }}<p style="color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.5rem;">{{
+                    .Description }}</p>{{ end }}
+            </a>
+        </article>
+        {{ end }}
+    </div>
+</section>
+{{ end }}

@@ -1,0 +1,37 @@
+<header class="site-header" id="site-header">
+    <div class="header-inner">
+        <a href="{{ .Site.BaseURL }}" class="logo" id="logo">
+            <span class="logo-icon">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+                    <rect x="2" y="2" width="36" height="36" rx="8" stroke="url(#logoGrad)" stroke-width="2"
+                        fill="none" />
+                    <text x="20" y="27" text-anchor="middle" fill="url(#logoGrad)" font-family="JetBrains Mono"
+                        font-size="18" font-weight="700">KZ</text>
+                    <defs>
+                        <linearGradient id="logoGrad" x1="0" y1="0" x2="40" y2="40">
+                            <stop offset="0%" stop-color="#00e5a0" />
+                            <stop offset="100%" stop-color="#00b4d8" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </span>
+            <span class="logo-text">Kai Zhang</span>
+        </a>
+        <nav class="main-nav" id="main-nav">
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL }}" class="nav-link {{ if eq .Name " Connect" }}nav-link--cta{{ end }}">
+                        {{ .Name }}
+                    </a>
+                </li>
+                {{ end }}
+            </ul>
+        </nav>
+    </div>
+</header>

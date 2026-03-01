@@ -1,0 +1,13 @@
+{{ define "main" }}
+<article class="single-page">
+    <div class="section-container" style="padding: 8rem 2rem 4rem;">
+        <h1 style="font-family: var(--font-mono); font-size: 1.5rem; margin-bottom: 1rem; letter-spacing: -0.5px;">{{
+            .Title }}</h1>
+        {{ if .Date }}<time style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-green);">{{
+            .Date.Format "2006-01-02" }}</time>{{ end }}
+        <div style="margin-top: 2rem; line-height: 1.8; color: var(--text-secondary);">
+            {{ .Content }}
+        </div>
+    </div>
+</article>
+{{ end }}
